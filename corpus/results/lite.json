@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fd-x64",
+    "track": "pe-x64",
+    "tier": "M",
+    "split": "eval",
+    "input_size": 4163584,
+    "blc1": {
+      "size": 916563,
+      "encode_seconds": 135.99,
+      "decode_seconds": 1.51,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 1107137,
+      "encode_seconds": 0.34
+    },
+    "delta_pct": -17.213
+  },
+  {
+    "id": "7zip-x64",
+    "track": "pe-x64",
+    "tier": "M",
+    "split": "train",
+    "input_size": 574464,
+    "blc1": {
+      "size": 163728,
+      "encode_seconds": 22.48,
+      "decode_seconds": 0.4,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 187864,
+      "encode_seconds": 0.85
+    },
+    "delta_pct": -12.848
+  },
+  {
+    "id": "putty-x64",
+    "track": "pe-x64",
+    "tier": "M",
+    "split": "train",
+    "input_size": 1706136,
+    "blc1": {
+      "size": 790791,
+      "encode_seconds": 47.04,
+      "decode_seconds": 0.74,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 843695,
+      "encode_seconds": 0.16
+    },
+    "delta_pct": -6.271
+  },
+  {
+    "id": "ripgrep-x64",
+    "track": "pe-x64",
+    "tier": "M",
+    "split": "train",
+    "input_size": 4218880,
+    "blc1": {
+      "size": 1083271,
+      "encode_seconds": 131.21,
+      "decode_seconds": 1.76,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 1259805,
+      "encode_seconds": 0.38
+    },
+    "delta_pct": -14.013
+  },
+  {
+    "id": "bat-x64",
+    "track": "pe-x64",
+    "tier": "L",
+    "split": "eval",
+    "input_size": 7342592,
+    "blc1": {
+      "size": 2574307,
+      "encode_seconds": 216.22,
+      "decode_seconds": 14.11,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 2861780,
+      "encode_seconds": 1.32
+    },
+    "delta_pct": -10.045
+  },
+  {
+    "id": "peazip-x64",
+    "track": "pe-x64",
+    "tier": "L",
+    "split": "train",
+    "input_size": 7729152,
+    "blc1": {
+      "size": 1311172,
+      "encode_seconds": 203.55,
+      "decode_seconds": 2.68,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 1648114,
+      "encode_seconds": 1.38
+    },
+    "delta_pct": -20.444
+  },
+  {
+    "id": "notepadpp-x86",
+    "track": "pe-x86",
+    "tier": "L",
+    "split": "eval",
+    "input_size": 7794672,
+    "blc1": {
+      "size": 3061537,
+      "encode_seconds": 203.53,
+      "decode_seconds": 2.93,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 3665128,
+      "encode_seconds": 0.7
+    },
+    "delta_pct": -16.468
+  },
+  {
+    "id": "notepadpp-x64",
+    "track": "pe-x64",
+    "tier": "L",
+    "split": "eval",
+    "input_size": 8594928,
+    "blc1": {
+      "size": 3220673,
+      "encode_seconds": 247.9,
+      "decode_seconds": 3.4,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 3883637,
+      "encode_seconds": 0.85
+    },
+    "delta_pct": -17.071
+  }
+]

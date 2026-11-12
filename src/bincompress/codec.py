@@ -817,13 +817,18 @@ def _choose_encoding(
         )
         if x86_multiplexed:
             candidates.append((Method.X86_MULTIPLEX_LZMA2, x86_multiplexed))
-            x86_ppmd = _compress_x86_multiplexed(
-                original,
-                segment.x86_bitness,
-                preset,
-                ppmd_skeleton=True,
-            )
-            candidates.append((Method.X86_MULTIPLEX_PPMD, x86_ppmd))
+            try:
+                x86_ppmd = _compress_x86_multiplexed(
+                    original,
+                    segment.x86_bitness,
+                    preset,
+                    ppmd_skeleton=True,
+                )
+            except FormatError:
+                # No PPMd order produced a verifiable stream for this skeleton.
+                x86_ppmd = b""
+            if x86_ppmd:
+                candidates.append((Method.X86_MULTIPLEX_PPMD, x86_ppmd))
     elif segment.name == ".pdata" and segment.x86_bitness == 64 and original:
         candidates.append(
             (Method.PDATA_LZMA2, _compress_tuned_lzma(encode_pdata(original), preset))
