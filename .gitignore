@@ -31,3 +31,7 @@ task_plan.md
 .vscode/
 .DS_Store
 Thumbs.db
+
+# corpus artifacts (rebuilt from upstream by corpus/fetch.py)
+corpus/downloads/
+corpus/files/
