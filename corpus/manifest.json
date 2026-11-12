@@ -1,0 +1,362 @@
+{
+  "schema": "blc1-corpus/1",
+  "created": "2026-11-12",
+  "notes": "Corpus as code: nothing is redistributed; fetch.py rebuilds every file from pinned upstream URLs and verifies SHA-256 twice (archive and extracted member). Tiers: S < 0.5 MB, M 0.5-5 MB, L 5-30 MB, XL > 30 MB. Split: tune heuristics on 'train' families only; publish numbers on 'eval'.",
+  "entries": [
+    {
+      "id": "7zip-x64",
+      "project": "7-Zip",
+      "version": "26.06",
+      "url": "https://www.7-zip.org/a/7z2606-x64.msi",
+      "archive": {
+        "type": "msi",
+        "member": "_7z.exe"
+      },
+      "file": "7zip-26.06-x64.exe",
+      "track": "pe-x64",
+      "tier": "M",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "LGPL-2.1-or-later / BSD-3-Clause",
+      "compiler": "MSVC",
+      "split": "train",
+      "toolchain_evidence": "Rich header: VS2022-era build ids {29336, 35229, 40310}",
+      "size": 574464,
+      "sha256": "dc0493429fe28136fcb177a0e77c9875cbb3b0bff5f2f8eeba4df302e98cef76",
+      "source_sha256": "6dc822569e777d9a3ecd5ffcbc22b55600af87e6c5d9810a64e8566cf5a4af9f"
+    },
+    {
+      "id": "putty-x64",
+      "project": "PuTTY",
+      "version": "0.85",
+      "url": "https://the.earth.li/~sgtatham/putty/0.85/w64/putty.exe",
+      "archive": {
+        "type": "raw",
+        "member": null
+      },
+      "file": "putty-0.85-x64.exe",
+      "track": "pe-x64",
+      "tier": "M",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "MIT",
+      "compiler": "clang-cl (cross-build)",
+      "split": "train",
+      "toolchain_evidence": "no Rich header; upstream documents clang-cl/lld-link cross-compilation",
+      "size": 1706136,
+      "sha256": "d01fdb5aae8f112526040a39b0bfb9e27d813003178645e65f8d1cfdb2a26c87",
+      "source_sha256": "d01fdb5aae8f112526040a39b0bfb9e27d813003178645e65f8d1cfdb2a26c87"
+    },
+    {
+      "id": "ripgrep-x64",
+      "project": "ripgrep",
+      "version": "15.2.0",
+      "url": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip",
+      "archive": {
+        "type": "zip",
+        "member": "ripgrep-15.2.0-x86_64-pc-windows-msvc/rg.exe"
+      },
+      "file": "ripgrep-15.2.0-x64.exe",
+      "track": "pe-x64",
+      "tier": "M",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "MIT / Unlicense",
+      "compiler": "Rust (MSVC ABI)",
+      "split": "train",
+      "toolchain_evidence": "markers: rust-cargo, rust-panic; Rich header: VS2022 build ids {33145, 35721, 36248}",
+      "size": 4218880,
+      "sha256": "14231169855ec5205cf5a1b6f1db358ff4aed4247c86b69ce8aae647c77f6680",
+      "source_sha256": "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5"
+    },
+    {
+      "id": "fd-x64",
+      "project": "fd",
+      "version": "10.5.2",
+      "url": "https://github.com/sharkdp/fd/releases/download/v10.5.2/fd-v10.5.2-x86_64-pc-windows-msvc.zip",
+      "archive": {
+        "type": "zip",
+        "member": "fd-v10.5.2-x86_64-pc-windows-msvc/fd.exe"
+      },
+      "file": "fd-10.5.2-x86_64.exe",
+      "track": "pe-x64",
+      "tier": "M",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "MIT / Apache-2.0",
+      "compiler": "Rust (MSVC ABI)",
+      "split": "eval",
+      "toolchain_evidence": "markers: rust-cargo, rust-panic; Rich header: VS2022 build ids {33145, 35721, 36260}",
+      "size": 4163584,
+      "sha256": "2fe8ed92c57e0d1b3a84b66cf69ec8fac15330d0012147a64b4be521bbddfa83",
+      "source_sha256": "7edac75ef96b7e9a01ebb251a21ee86ea365a09adcfb865f1ec3346a906153b6"
+    },
+    {
+      "id": "bat-x64",
+      "project": "bat",
+      "version": "0.26.1",
+      "url": "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip",
+      "archive": {
+        "type": "zip",
+        "member": "bat-v0.26.1-x86_64-pc-windows-msvc/bat.exe"
+      },
+      "file": "bat-0.26.1-x86_64.exe",
+      "track": "pe-x64",
+      "tier": "L",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "MIT / Apache-2.0",
+      "compiler": "Rust (MSVC ABI)",
+      "split": "eval",
+      "toolchain_evidence": "markers: rust-cargo, rust-panic; Rich header: VS2022 build ids {30729, 35207, 35219}",
+      "size": 7342592,
+      "sha256": "9ea9f7ab1c27aa5c9390e91543f9f47c6bd17bc53f3e30ac9db762f28f55c4fd",
+      "source_sha256": "0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b"
+    },
+    {
+      "id": "peazip-x64",
+      "project": "PeaZip",
+      "version": "11.4.0",
+      "url": "https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip_portable-11.4.0.WIN64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "peazip_portable-11.4.0.WIN64/peazip.exe"
+      },
+      "file": "peazip-11.4.0-x86_64.exe",
+      "track": "pe-x64",
+      "tier": "L",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "LGPL-3.0-only",
+      "compiler": "FreePascal / Lazarus",
+      "split": "train",
+      "toolchain_evidence": "marker: lazarus; no Rich header (FPC internal linker)",
+      "size": 7729152,
+      "sha256": "a79b243d24107c927dbc085e9fff261ae08516269417cf20830cfa7ac453743e",
+      "source_sha256": "892426473d70e88738c869b336dd06534f84b7eeec3374494514e7ee32b3b833"
+    },
+    {
+      "id": "notepadpp-x64",
+      "project": "Notepad++",
+      "version": "8.9.9.1",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.portable.x64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "notepad++.exe"
+      },
+      "file": "notepadpp-8.9.9.1-x64.exe",
+      "track": "pe-x64",
+      "tier": "L",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "GPL-3.0-or-later",
+      "compiler": "MSVC",
+      "split": "eval",
+      "toolchain_evidence": "Rich header: VS2022 build ids {33145, 35207, 35229}",
+      "size": 8594928,
+      "sha256": "5518ad65f576b993c48da1878bda83a62f7a101d246aefab472379ca8800390c",
+      "source_sha256": "cbcefa34677e10fe6dd19802f7d6b3b9860cd6de62afeaae7680e09c51b47779"
+    },
+    {
+      "id": "notepadpp-x86",
+      "project": "Notepad++",
+      "version": "8.9.9.1",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.portable.zip",
+      "archive": {
+        "type": "zip",
+        "member": "notepad++.exe"
+      },
+      "file": "notepadpp-8.9.9.1-x86.exe",
+      "track": "pe-x86",
+      "tier": "L",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "GPL-3.0-or-later",
+      "compiler": "MSVC",
+      "split": "eval",
+      "toolchain_evidence": "Rich header: VS2022 build ids {33145, 35207, 35229}",
+      "size": 7794672,
+      "sha256": "2565e422748177dc53a47b780c5c66c4cb6d4a7bbf893f28c17b171f23874af1",
+      "source_sha256": "7b48fceec762e80c2bc781a59739403f7af8b6136ed0ffc369a2680c535ab78a"
+    },
+    {
+      "id": "heidisql-x64",
+      "project": "HeidiSQL",
+      "version": "12.22",
+      "url": "https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.22/HeidiSQL_12.22_64_Portable.zip",
+      "archive": {
+        "type": "zip",
+        "member": "heidisql.exe"
+      },
+      "file": "heidisql-12.22-x64.exe",
+      "track": "pe-x64",
+      "tier": "L",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "GPL-2.0-only",
+      "compiler": "Delphi",
+      "split": "eval",
+      "toolchain_evidence": "marker: embarcadero RTL strings; no Rich header",
+      "size": 25190168,
+      "sha256": "8a5e3407e5607d5df5e59eb521591b096e9b53c2421a87886b3b4405edeb16e0",
+      "source_sha256": "7b36821fa3e16cc37b511d41747efa4c8b980d1e3fa937e52c5931bcc4ee79b4"
+    },
+    {
+      "id": "rclone-x64",
+      "project": "rclone",
+      "version": "1.76.0",
+      "url": "https://github.com/rclone/rclone/releases/download/v1.76.0/rclone-v1.76.0-windows-amd64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "rclone-v1.76.0-windows-amd64/rclone.exe"
+      },
+      "file": "rclone-1.76.0-x86_64.exe",
+      "track": "pe-x64",
+      "tier": "XL",
+      "profiles": [
+        "lite",
+        "full"
+      ],
+      "license": "MIT",
+      "compiler": "Go (gc)",
+      "split": "train",
+      "toolchain_evidence": "marker: go-buildinfo magic",
+      "size": 85647872,
+      "sha256": "acd80683e23151e93bbe0d6ffa74d26e542ec510332f630beecb9944f8d1a623",
+      "source_sha256": "8b4fd2737ade4e70c057ef4a49deb7cffe94b0fb9d7587c189d149823f21a1dc"
+    },
+    {
+      "id": "putty-x86",
+      "project": "PuTTY",
+      "version": "0.85",
+      "url": "https://the.earth.li/~sgtatham/putty/0.85/w32/putty.exe",
+      "archive": {
+        "type": "raw",
+        "member": null
+      },
+      "file": "putty-0.85-x86.exe",
+      "track": "pe-x86",
+      "tier": "M",
+      "profiles": [
+        "full"
+      ],
+      "license": "MIT",
+      "compiler": "clang-cl (cross-build)",
+      "split": "train",
+      "toolchain_evidence": "no Rich header; upstream documents clang-cl/lld-link cross-compilation",
+      "size": 1513624,
+      "sha256": "4c70267ca03a00ea761ec358498b990a7221decb36eace9b7dbe6a751be0fb3b",
+      "source_sha256": "4c70267ca03a00ea761ec358498b990a7221decb36eace9b7dbe6a751be0fb3b"
+    },
+    {
+      "id": "hugo-x64",
+      "project": "Hugo",
+      "version": "0.169.0",
+      "url": "https://github.com/gohugoio/hugo/releases/download/v0.169.0/hugo_extended_0.169.0_windows-amd64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "hugo.exe"
+      },
+      "file": "hugo-0.169.0-x86_64.exe",
+      "track": "pe-x64",
+      "tier": "XL",
+      "profiles": [
+        "full"
+      ],
+      "license": "Apache-2.0",
+      "compiler": "Go (gc)",
+      "split": "eval",
+      "toolchain_evidence": "marker: go-buildinfo magic",
+      "size": 65346560,
+      "sha256": "2ff0b0a38f8afc04908b782144094431e73c64b6344619bc1d7f149f2e8e1782",
+      "source_sha256": "396b4c8326dc2dd61c2618f825042781c5ea43e1ac1375a2204a9fde4e98b84c"
+    },
+    {
+      "id": "ripgrep-arm64",
+      "project": "ripgrep",
+      "version": "15.2.0",
+      "url": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-pc-windows-msvc.zip",
+      "archive": {
+        "type": "zip",
+        "member": "ripgrep-15.2.0-aarch64-pc-windows-msvc/rg.exe"
+      },
+      "file": "ripgrep-15.2.0-arm64.exe",
+      "track": "pe-arm64",
+      "tier": "M",
+      "profiles": [
+        "full"
+      ],
+      "license": "MIT / Unlicense",
+      "compiler": "Rust (MSVC ABI)",
+      "split": "eval",
+      "toolchain_evidence": "markers: rust-cargo, rust-panic; Rich header: VS2022 build ids {30729, 33145, 35207, 35228}",
+      "size": 3859456,
+      "sha256": "d33a29a9ef03c9f4c03be9e8d88498e6e2d2e566d64cdbdef97f9afc8f13120c",
+      "source_sha256": "e4abca10c3a64ebea742667dd7009449d49403db5460dd6873e389fa2945360f"
+    },
+    {
+      "id": "notepadpp-arm64",
+      "project": "Notepad++",
+      "version": "8.9.9.1",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.portable.arm64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "notepad++.exe"
+      },
+      "file": "notepadpp-8.9.9.1-arm64.exe",
+      "track": "pe-arm64",
+      "tier": "L",
+      "profiles": [
+        "full"
+      ],
+      "license": "GPL-3.0-or-later",
+      "compiler": "MSVC",
+      "split": "eval",
+      "toolchain_evidence": "Rich header: VS2022 build ids {33145, 35207, 35229}",
+      "size": 8935408,
+      "sha256": "5e61bfd213ef2e45c2655c99510020b9509d740b06d699e583ce8494d34ca09d",
+      "source_sha256": "de0c5d1f15ccbdeac05421e1c282cb3d7e2da97bac674efa576d8ace04a5f20b"
+    },
+    {
+      "id": "rclone-arm64",
+      "project": "rclone",
+      "version": "1.76.0",
+      "url": "https://github.com/rclone/rclone/releases/download/v1.76.0/rclone-v1.76.0-windows-arm64.zip",
+      "archive": {
+        "type": "zip",
+        "member": "rclone-v1.76.0-windows-arm64/rclone.exe"
+      },
+      "file": "rclone-1.76.0-arm64.exe",
+      "track": "pe-arm64",
+      "tier": "XL",
+      "profiles": [
+        "full"
+      ],
+      "license": "MIT",
+      "compiler": "Go (gc)",
+      "split": "eval",
+      "toolchain_evidence": "marker: go-buildinfo magic",
+      "size": 78254592,
+      "sha256": "666b57912d75ecc67b38960c4e28448e94b61d7977f5f709e25c0c7a3c6d7fcd",
+      "source_sha256": "c406c8a69a5a408e50624aa990fbb0a6266b3a4e83782a94de3cb96f50f86f10"
+    }
+  ]
+}
