@@ -1,0 +1,12 @@
+BLC1
+Copyright 2026 poetetriste
+
+This product bundles a Windows build derived from Microsoft preflate-rs 0.7.6,
+licensed under the Apache License, Version 2.0:
+https://github.com/microsoft/preflate-rs
+
+The bundled binary is located at:
+src/bincompress/preflate_rs_0_7.dll
+
+SHA-256:
+AA827E0AC5C47AF1E8CCAD5A1FCDA2771C0422242663838761B7BF3FF6C2C2CD

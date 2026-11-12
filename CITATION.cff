@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use BLC1 in research, please cite this repository."
+title: "BLC1: structure-aware lossless compression for PE binaries"
+type: software
+authors:
+  - family-names: "poetetriste"
+repository-code: "https://github.com/poetetriste/blc1"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-11-12

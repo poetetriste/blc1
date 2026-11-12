@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.whl
+
+# Local research inputs and generated artifacts
+bench_outputs/
+corpora/
+rust-target/
+tools/
+vendor/
+*.blc1
+*.7z
+*.pcf
+
+# Internal working notes
+findings.md
+progress.md
+task_plan.md
+.gitkeep
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

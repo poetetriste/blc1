@@ -1,0 +1,36 @@
+name: Benchmark result
+description: Submit a reproducible compression comparison
+title: "[benchmark]: "
+labels: [benchmark]
+body:
+  - type: input
+    id: corpus
+    attributes:
+      label: Corpus
+      description: Public source, version, and checksum manifest.
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Exact commands
+      description: Include every BLC1 and competitor command line.
+      render: powershell
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Complete archive sizes
+      description: Include inputs, full archives, encode/decode time, and peak memory.
+    validations:
+      required: true
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: Every decoded file was compared byte-for-byte with its input.
+          required: true
+        - label: Competitor versions are pinned and archive settings were inspected.
+          required: true
