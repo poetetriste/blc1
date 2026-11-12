@@ -142,5 +142,41 @@
       "encode_seconds": 0.85
     },
     "delta_pct": -17.071
+  },
+  {
+    "id": "heidisql-x64",
+    "track": "pe-x64",
+    "tier": "L",
+    "split": "eval",
+    "input_size": 25190168,
+    "blc1": {
+      "size": 6216848,
+      "encode_seconds": 583.77,
+      "decode_seconds": 1.58,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 6496071,
+      "encode_seconds": 2.65
+    },
+    "delta_pct": -4.298
+  },
+  {
+    "id": "rclone-x64",
+    "track": "pe-x64",
+    "tier": "XL",
+    "split": "train",
+    "input_size": 85647872,
+    "blc1": {
+      "size": 17735730,
+      "encode_seconds": 2055.42,
+      "decode_seconds": 23.68,
+      "roundtrip_ok": true
+    },
+    "seven_zip": {
+      "size": 20401942,
+      "encode_seconds": 12.02
+    },
+    "delta_pct": -13.068
   }
 ]
